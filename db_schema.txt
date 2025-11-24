@@ -1,0 +1,158 @@
+
+-- Enable UUID extension for generating unique IDs
+create extension if not exists "uuid-ossp";
+
+-- 1. PROFILE TABLE
+create table public.profile (
+  id uuid primary key default uuid_generate_v4(),
+  full_name text not null,
+  headline text,
+  short_bio text,
+  long_bio text,
+  avatar_url text,
+  resume_url text,
+  email text,
+  phone text,
+  location text,
+  linkedin_url text,
+  github_url text,
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null
+);
+
+-- 2. EXPERIENCES TABLE
+create table public.experiences (
+  id uuid primary key default uuid_generate_v4(),
+  type text check (type in ('education', 'work', 'volunteer', 'certification')),
+  title text not null,
+  organization text,
+  start_date text,
+  end_date text,
+  description text,
+  icon_name text,
+  image_url text,
+  subtype text, -- New column for sub-categorization (Certification, Award, Academic, etc.)
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null
+);
+
+-- 3. SKILLS TABLE
+create table public.skills (
+  id uuid primary key default uuid_generate_v4(),
+  name text not null,
+  level integer check (level >= 0 and level <= 100),
+  category text check (category in ('technical', 'soft', 'tool')),
+  description text,
+  icon_name text,
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null
+);
+
+-- 4. PROJECTS TABLE
+create table public.projects (
+  id uuid primary key default uuid_generate_v4(),
+  title text not null,
+  role text,
+  description text,
+  tools text[],
+  image_url text,
+  link text,
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null
+);
+
+-- POLICIES
+alter table public.profile enable row level security;
+alter table public.experiences enable row level security;
+alter table public.skills enable row level security;
+alter table public.projects enable row level security;
+
+create policy "Public profiles are viewable by everyone." on public.profile for select using (true);
+create policy "Public experiences are viewable by everyone." on public.experiences for select using (true);
+create policy "Public skills are viewable by everyone." on public.skills for select using (true);
+create policy "Public projects are viewable by everyone." on public.projects for select using (true);
+
+-- --- SEED DATA --- --
+
+-- 1. Profile
+insert into public.profile (full_name, headline, short_bio, avatar_url, email, linkedin_url, github_url)
+values (
+  'Truong Thi Minh Tu',
+  'Aspiring Business Analyst | Future Product Owner',
+  'A dedicated fresh graduate ready to transform academic knowledge into real-world results. I bring a proactive mindset, strong analytical foundation, and an eagerness to tackle complex business challenges.',
+  'https://picsum.photos/400/400',
+  'tutruong.dev@gmail.com',
+  'https://linkedin.com',
+  'https://github.com'
+);
+
+-- 2. Work Experience
+insert into public.experiences (type, title, organization, start_date, end_date, description, subtype)
+values
+(
+  'work', 
+  'Korean BrSE Intern', 
+  'FPT SOFTWARE', 
+  '04/2025', 
+  '07/2025', 
+  '• Completed a full-stack development internship combined with Korean language training.\n• Led a team of 3 members in a mock project; received Consolation Prize for team performance and solution quality.\n• Achieved B2 level in the company’s internal English proficiency assessment.\n• Strengthened communication skills and collaboration across technical and non-technical team members.',
+  null
+),
+(
+  'work', 
+  'Secretary / Assistant VP of Education', 
+  'HUE TOASTMASTERS CLUB', 
+  '06/2024', 
+  '05/2025', 
+  '• Maintained bilingual records of meeting minutes, attendance, club documents.\n• Developed meeting agendas, coordinated speaking roles, and tracked progress for 10+ members.\n• Created monthly themed agendas and scheduled content to support continuous member development.',
+  null
+),
+(
+  'work', 
+  'Project Leader – Academic IT Project', 
+  'HUE UNIVERSITY OF SCIENCES', 
+  '06/2024', 
+  '08/2024', 
+  '• Led a 5-member team to develop a ReactJS-based application.\n• Assigned tasks, monitored progress, and resolved technical challenges collaboratively.\n• Built team communication efficiency and improved documentation standards.',
+  null
+),
+(
+  'work', 
+  'Regional Coordinator – Hue', 
+  'VIETHOPE INC.', 
+  '08/2023', 
+  '02/2024', 
+  '• Coordinated 3+ scholarship events and annual Summit activities\n• Increased volunteer engagement by 30% through improved task delegation and activity planning, with additional support as Event Technical Support.\n• Collaborated with 14 core members and top-notch trainers to develop professional workplace and coordination skills.',
+  null
+),
+(
+  'work', 
+  'Data Leader', 
+  'VIETHOPE INC.', 
+  '09/2023', 
+  '10/2023', 
+  '• Supervised 8 data volunteers across regions, ensuring accuracy and consistency of applicant data using Google Sheet.\n• Managed weekly data updates for the VSDP program website, improving data accuracy by 20%.\n• Enhanced reporting and team communication efficiency.',
+  null
+);
+
+-- 3. Education
+insert into public.experiences (type, title, organization, start_date, end_date, description, subtype)
+values
+(
+  'education', 
+  'Bachelor of Information Technology', 
+  'Hue University of Sciences, Hue University', 
+  '2021', 
+  '2025', 
+  'GPA: 3.05/4.0\n\nRelevant Coursework:\nSystem Analysis & Design; Database Systems (SQL); Object-Oriented Analysis & Design; Software Project Management; Software Engineering; Front-end (HTML/CSS/JavaScript); UI/UX; Soft Skills in Communication & Presentation.\n\nAcademic Achievements:\n• Third Place, Internship Project Thesis Competition, FPT Software\n• Led a team of 5 members to propose and present an innovative software solution.',
+  null
+);
+
+-- 4. Certifications & Awards (Categorized with subtype)
+insert into public.experiences (type, title, organization, start_date, description, icon_name, image_url, subtype)
+values
+-- Certifications
+('certification', 'Youth Development Program Completion', 'Youth Dev', '2022', 'Completed leadership and skills training.', 'Star', 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop', 'Certification'),
+('certification', 'English Certification Level B1', 'Language Institute', '2022', 'Achieved B1 proficiency level.', 'Award', 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop', 'Certification'),
+
+-- Academic / Scholarships / Extracurricular
+('certification', 'Exchange Student Program', 'BSRU, Thailand', '2023', 'Participated in academic and cultural exchange.', 'Users', 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop', 'Extracurricular'),
+('certification', 'Five-Good Student Award', 'University', '2023, 2024', 'Recognized for academic and volunteering excellence.', 'Trophy', null, 'Academic'),
+('certification', 'Excellent Volunteer', 'Student Exchange Program', '2024', 'Outstanding contribution award.', 'Heart', null, 'Award'),
+('certification', 'Full Scholarship 2023', 'University Board', '2023', 'Awarded for high GPA.', 'Award', null, 'Scholarship');
